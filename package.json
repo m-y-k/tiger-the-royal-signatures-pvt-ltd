@@ -1,0 +1,11 @@
+{
+  "name": "tiger-the-royal-signatures",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix website",
+    "dev": "npm run dev --prefix website",
+    "start": "npm run start --prefix website",
+    "lint": "npm run lint --prefix website"
+  }
+}
