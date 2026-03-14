@@ -5,7 +5,9 @@
   "scripts": {
     "build": "npm run build --prefix website",
     "dev": "npm run dev --prefix website",
-    "start": "npm run start --prefix website",
-    "lint": "npm run lint --prefix website"
+    "start": "npm run start --prefix website"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
