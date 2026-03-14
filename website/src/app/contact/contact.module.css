@@ -1,0 +1,208 @@
+.page {
+  padding-top: calc(var(--header-height) + var(--announcement-height) + var(--space-xl));
+  padding-bottom: var(--space-4xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 4vw, 56px);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.pageDesc {
+  font-size: 16px;
+  color: #7A756E;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-3xl);
+}
+
+/* Form */
+.formSection {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.input,
+.textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 12px var(--space-md);
+  border: 1.5px solid var(--color-warm-gray-light);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-primary);
+  transition: border-color var(--duration-fast);
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--color-gold);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  background: var(--gradient-gold);
+  color: var(--color-obsidian);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-silk);
+  margin-top: var(--space-sm);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Info */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-gold);
+  transition: transform var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+.infoCard:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.infoIcon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+
+.infoLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.infoValue {
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.infoNote {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.mapPlaceholder {
+  flex: 1;
+  min-height: 200px;
+  background: var(--bg-accent);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.mapPlaceholder span {
+  font-size: 28px;
+}
+
+.mapPlaceholder p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: calc(var(--header-height-mobile) + var(--announcement-height) + var(--space-lg));
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+  .contentGrid { grid-template-columns: 1fr; }
+  .formRow { grid-template-columns: 1fr; }
+}

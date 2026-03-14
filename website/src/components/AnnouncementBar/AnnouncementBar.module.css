@@ -1,0 +1,85 @@
+.announcement {
+  background: var(--color-burgundy);
+  height: var(--announcement-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: var(--z-sticky);
+}
+
+.marqueeWrapper {
+  overflow: hidden;
+  flex: 1;
+  margin-right: 220px;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xl);
+  padding: 0 var(--space-xl);
+}
+
+.marqueeItem {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #F5F0E8;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.diamond {
+  color: var(--color-gold);
+  font-size: 8px;
+}
+
+.socialLinks {
+  position: absolute;
+  right: var(--space-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.socialLink {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.6);
+  transition: color var(--duration-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-gold);
+}
+
+.separator {
+  color: rgba(245, 240, 232, 0.3);
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .socialLinks {
+    display: none;
+  }
+}
